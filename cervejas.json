@@ -1,0 +1,64 @@
+{
+  "beers": [
+    {
+      "id": 1,
+      "code": 1,
+      "name": "English IPA",
+      "brewery": "Bull Bier",
+      "country": "Brasil",
+      "type": "ENGLISH PALE ALE",
+      "descript": "",
+      "website": "https://www.instagram.com/rafa.gbarreto/"
+    },
+    {
+      "id": 2,
+      "code": 2,
+      "name": "Weiss",
+      "brewery": "Bull Bier",
+      "country": "Brasil",
+      "type": "WEISSBIER",
+      "descript": "",
+      "website": "https://www.instagram.com/rafa.gbarreto/"
+    },
+    {
+      "id": 3,
+      "code": 3,
+      "name": "WeissHop",
+      "brewery": "Bull Bier",
+      "country": "Brasil",
+      "type": "WEISSBIER",
+      "descript": "Weiss com processo de Dry hopping",
+      "website": "https://www.instagram.com/rafa.gbarreto/"
+    },
+    {
+      "id": 4,
+      "code": 4,
+      "name": "Amora Amorinha",
+      "brewery": "Bull Bier",
+      "country": "Brasil",
+      "type": "FRUIT BEER",
+      "descript": "",
+      "website": "https://www.instagram.com/rafa.gbarreto/"
+    },
+    {
+      "id": 5,
+      "code": 5,
+      "name": "ESB",
+      "brewery": "DOCA Beer",
+      "country": "Brasil",
+      "type": "ESB",
+      "descript": "",
+      "website": "https://www.instagram.com/maarcilioo/"
+    },
+    {
+      "id": 6,
+      "code": 6,
+      "name": "IPA",
+      "brewery": "DOCA Beer",
+      "country": "Brasil",
+      "type": "INDIA PALE ALE",
+      "descript": "",
+      "website": "https://www.instagram.com/maarcilioo/"
+    }
+  ]
+}
