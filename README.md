@@ -16,3 +16,7 @@ npm run build
 ```
 
 For more information see the [docs for vueify](https://github.com/vuejs/vueify).
+
+## Credits
+
+This lib uses as a base the awesome [Kratos Boilerplate](https://github.com/LFeh/kratos-boilerplate) by [@LFeh](https://twitter.com/lfeh) :heart: :computer:

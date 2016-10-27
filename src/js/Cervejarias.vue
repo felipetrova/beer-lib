@@ -1,7 +1,7 @@
 <template>
   <a class="fixo button is-large is-danger is-loading" v-show="isLoading">Loading</a>
   <div class="container">
-    <h1 class="title">{{title}}</h1>
+    <!-- <h1 class="title">{{title}}</h1> -->
     <div class="columns">
       <div class="column is-5">
         <p class="control has-addons">
@@ -96,41 +96,42 @@
         <div class="column">
           <label class="label">Tipo</label>
           <p class="control">
-            <!-- <input class="input" type="text" placeholder="Text input" v-model="selected.type"> -->
-            <select class="input" v-model="selected.type">
-              <option>ALTBIER</option>
-              <option>AMERICAN BROWN ALE</option>
-              <option>AMERICAN LAGER</option>
-              <option>AMERICAN PALE ALE</option>
-              <option>BELGIAN BLOND ALE</option>
-              <option>BELGIAN PALE ALE</option>
-              <option>BOCK</option>
-              <option>DORTMUNDER EXPORT</option>
-              <option>DRY BEER</option>
-              <option>DUBBEL</option>
-              <option>DUNKEL</option>
-              <option>ENGLISH PALE ALE</option>
-              <option>ENGLISH BROWN ALE</option>
-              <option>ESB</option>
-              <option>FRUIT BEER</option>
-              <option>HEFEWEIZEN</option>
-              <option>HELLES</option>
-              <option>INDIA PALE ALE</option>
-              <option>KELLER</option>
-              <option>KÖLSCH</option>
-              <option>LITE</option>
-              <option>MARZEN</option>
-              <option>PILSNER</option>
-              <option>PREMIUM</option>
-              <option>RADLER</option>
-              <option>RED ALE</option>
-              <option>SAISON</option>
-              <option>STOUT</option>
-              <option>TRIPEL</option>
-              <option>VIENNA</option>
-              <option>WEISSBIER</option>
-              <option>WITBIER</option>
-            </select>
+            <span class="select">
+              <select v-model="selected.type">
+                <option>ALTBIER</option>
+                <option>AMERICAN BROWN ALE</option>
+                <option>AMERICAN LAGER</option>
+                <option>AMERICAN PALE ALE</option>
+                <option>BELGIAN BLOND ALE</option>
+                <option>BELGIAN PALE ALE</option>
+                <option>BOCK</option>
+                <option>DORTMUNDER EXPORT</option>
+                <option>DRY BEER</option>
+                <option>DUBBEL</option>
+                <option>DUNKEL</option>
+                <option>ENGLISH PALE ALE</option>
+                <option>ENGLISH BROWN ALE</option>
+                <option>ESB</option>
+                <option>FRUIT BEER</option>
+                <option>HEFEWEIZEN</option>
+                <option>HELLES</option>
+                <option>INDIA PALE ALE</option>
+                <option>KELLER</option>
+                <option>KÖLSCH</option>
+                <option>LITE</option>
+                <option>MARZEN</option>
+                <option>PILSNER</option>
+                <option>PREMIUM</option>
+                <option>RADLER</option>
+                <option>RED ALE</option>
+                <option>SAISON</option>
+                <option>STOUT</option>
+                <option>TRIPEL</option>
+                <option>VIENNA</option>
+                <option>WEISSBIER</option>
+                <option>WITBIER</option>
+              </select>
+            </span>
           </p>
         </div>
 
