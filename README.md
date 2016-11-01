@@ -1,4 +1,4 @@
-![BeerLib](https://raw.github.com/felipetrova/beer-lib/master/build/img/beerlib.png)
+![BeerLib](https://raw.github.com/felipetrova/beer-lib/master/build/img/beerlib-h.png)
 
 # beer-lib
 
