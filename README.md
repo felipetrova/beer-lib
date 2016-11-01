@@ -1,3 +1,5 @@
+![BeerLib](https://raw.github.com/felipetrova/beer-lib/master/build/img/beerlib.png)
+
 # beer-lib
 
 > A simple lib to save and to rank beers of the world

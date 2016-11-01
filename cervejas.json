@@ -59,6 +59,16 @@
       "type": "INDIA PALE ALE",
       "descript": "",
       "website": "https://www.instagram.com/maarcilioo/"
+    },
+    {
+      "name": "62 Pilsner",
+      "brewery": "Coopers",
+      "code": "",
+      "type": "PILSNER",
+      "website": "http://www.coopers.com.au/",
+      "country": "Australia",
+      "descript": "Sarah: \"Gostei, é leve e suave. Tomaria um balde\" :)",
+      "id": 7
     }
   ]
 }

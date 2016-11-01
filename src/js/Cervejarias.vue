@@ -5,7 +5,7 @@
     <div class="columns">
       <div class="column is-5">
         <p class="control has-addons">
-          <input class="input is-expanded" type="text" placeholder="Procure pelo nome" v-model="search">
+          <input class="input is-expanded" type="text" placeholder="Procure pela cerveja" v-model="search">
           <a class="button is-info" @click.prevent="seers">Procurar</a>
         </p>
       </div>
@@ -19,158 +19,158 @@
 
     <div class="columns">
       <div class="column is-12">
-        <table class="table is-narrow is-bordered">
+        <table class="table is-narrow is-striped is-bordered">
           <thead>
-            <th>Nome</th>
-            <th>País</th>
-            <th>Tipo</th>
-            <th>Observação</th>
-            <th>Mais</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="beer in beers">
-            <td>{{beer.name}} | {{beer.brewery}}</td>
-            <td>{{beer.country}}</td>
-            <td>{{beer.type}}</td>
-            <td>{{beer.descript}}</td>
-            <td class="is-icon">
-              <a href="#">
-                <i class="fa fa-map-marker"></i>
-              </a>
-              <a href="#">
-                <i class="fa fa-plus-circle"></i>
-              </a>
-            </td>
-            <td class="is-icon">
+            <tr>
+              <th>Cerveja</th>
+              <th>País</th>
+              <th>Tipo</th>
+              <th>Observação</th>
+              <th>Mais</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="beer in beers">
+              <td>{{beer.name}} | {{beer.brewery}}</td>
+              <td>{{beer.country}}</td>
+              <td>{{beer.type}}</td>
+              <td>{{beer.descript}}</td>
+              <td class="is-icon">
+                <a href="#">
+                  <i class="fa fa-map-marker"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-plus-circle"></i>
+                </a>
+              </td>
+              <td class="is-icon">
 
-              <a href="#" @click.prevent="editBeer(beer)">
-                <i class="fa fa-edit"></i>
-              </a>
-              <a href="#" @click.prevent="removeBeer(beer)">
-                <i class="fa fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <Pagination :total="total" :page="page" :itens-per-page="itensPerPage" @change-page="onChangePage"></Pagination>
+                <a href="#" @click.prevent="editBeer(beer)">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <a href="#" @click.prevent="removeBeer(beer)">
+                  <i class="fa fa-trash"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <Pagination :total="total" :page="page" :itens-per-page="itensPerPage" @change-page="onChangePage"></Pagination>
+      </div>
     </div>
   </div>
-</div>
 
-<div id="modal_beer" class="modal" :class="{'is-active':showModal}">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Cerveja: {{selected.name}}</p>
-      <button class="delete" @click.prevent="showModal=false"></button>
-    </header>
-    <section class="modal-card-body">
+  <div id="modal_beer" class="modal" :class="{'is-active':showModal}">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Cerveja: {{selected.name}}</p>
+        <button class="delete" @click.prevent="showModal=false"></button>
+      </header>
+      <section class="modal-card-body">
 
-      <div class="columns">
-        <div class="column">
-          <label class="label">Nome</label>
-          <p class="control">
-            <input class="input" type="text" placeholder="Nome da Cerveja" v-model="selected.name">
-          </p>
-        </div>
-        
-        <div class="column">
-          <label class="label">Cervejaria</label>
-          <p class="control">
-            <input class="input" type="text" placeholder="Cervejaria" v-model="selected.brewery">
-          </p>
-        </div>
-        
-        <div class="column">
-          <label class="label">Código</label>
-          <p class="control">
-            <input class="input" type="text" placeholder="Código" v-model="selected.code">
-          </p>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column">
-          <label class="label">Tipo</label>
-          <p class="control">
-            <span class="select">
-              <select v-model="selected.type">
-                <option>ALTBIER</option>
-                <option>AMERICAN BROWN ALE</option>
-                <option>AMERICAN LAGER</option>
-                <option>AMERICAN PALE ALE</option>
-                <option>BELGIAN BLOND ALE</option>
-                <option>BELGIAN PALE ALE</option>
-                <option>BOCK</option>
-                <option>DORTMUNDER EXPORT</option>
-                <option>DRY BEER</option>
-                <option>DUBBEL</option>
-                <option>DUNKEL</option>
-                <option>ENGLISH PALE ALE</option>
-                <option>ENGLISH BROWN ALE</option>
-                <option>ESB</option>
-                <option>FRUIT BEER</option>
-                <option>HEFEWEIZEN</option>
-                <option>HELLES</option>
-                <option>INDIA PALE ALE</option>
-                <option>KELLER</option>
-                <option>KÖLSCH</option>
-                <option>LITE</option>
-                <option>MARZEN</option>
-                <option>PILSNER</option>
-                <option>PREMIUM</option>
-                <option>RADLER</option>
-                <option>RED ALE</option>
-                <option>SAISON</option>
-                <option>STOUT</option>
-                <option>TRIPEL</option>
-                <option>VIENNA</option>
-                <option>WEISSBIER</option>
-                <option>WITBIER</option>
-              </select>
-            </span>
-          </p>
+        <div class="columns">
+          <div class="column">
+            <label class="label">Cerveja</label>
+            <p class="control">
+              <input class="input" type="text" placeholder="Nome da Cerveja" v-model="selected.name">
+            </p>
+          </div>
+          
+          <div class="column">
+            <label class="label">Cervejaria</label>
+            <p class="control">
+              <input class="input" type="text" placeholder="Cervejaria" v-model="selected.brewery">
+            </p>
+          </div>
+          
+          <div class="column">
+            <label class="label">Código</label>
+            <p class="control">
+              <input class="input" type="text" placeholder="Código" v-model="selected.code">
+            </p>
+          </div>
         </div>
 
-        <div class="column">
-          <label class="label">Site</label>
-          <p class="control">
-            <input class="input" type="text" placeholder="Site/Facebook" v-model="selected.website">
-          </p>
+        <div class="columns">
+          <div class="column">
+            <label class="label">Tipo</label>
+            <p class="control">
+              <span class="select">
+                <select v-model="selected.type">
+                  <option>ALTBIER</option>
+                  <option>AMERICAN BROWN ALE</option>
+                  <option>AMERICAN LAGER</option>
+                  <option>AMERICAN PALE ALE</option>
+                  <option>BELGIAN BLOND ALE</option>
+                  <option>BELGIAN PALE ALE</option>
+                  <option>BOCK</option>
+                  <option>DORTMUNDER EXPORT</option>
+                  <option>DRY BEER</option>
+                  <option>DUBBEL</option>
+                  <option>DUNKEL</option>
+                  <option>ENGLISH PALE ALE</option>
+                  <option>ENGLISH BROWN ALE</option>
+                  <option>ESB</option>
+                  <option>FRUIT BEER</option>
+                  <option>HEFEWEIZEN</option>
+                  <option>HELLES</option>
+                  <option>INDIA PALE ALE</option>
+                  <option>KELLER</option>
+                  <option>KÖLSCH</option>
+                  <option>LITE</option>
+                  <option>MARZEN</option>
+                  <option>PILSNER</option>
+                  <option>PREMIUM</option>
+                  <option>RADLER</option>
+                  <option>RED ALE</option>
+                  <option>SAISON</option>
+                  <option>STOUT</option>
+                  <option>TRIPEL</option>
+                  <option>VIENNA</option>
+                  <option>WEISSBIER</option>
+                  <option>WITBIER</option>
+                </select>
+              </span>
+            </p>
+          </div>
+
+          <div class="column">
+            <label class="label">Site</label>
+            <p class="control">
+              <input class="input" type="text" placeholder="Site/Facebook" v-model="selected.website">
+            </p>
+          </div>
+
+          <div class="column">
+            <label class="label">País</label>
+            <p class="control">
+              <input class="input" type="text" placeholder="País" v-model="selected.country">
+            </p>
+          </div>
         </div>
 
-        <div class="column">
-          <label class="label">País</label>
-          <p class="control">
-            <input class="input" type="text" placeholder="País" v-model="selected.country">
-          </p>
+        <div class="columns">
+          <div class="column">
+            <label class="label">Descrição</label>
+            <p class="control">
+              <textarea class="textarea" placeholder="Observações" v-model="selected.descript"></textarea>
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="columns">
-        <div class="column">
-          <label class="label">Descrição</label>
-          <p class="control">
-            <textarea class="textarea" placeholder="Observações" v-model="selected.descript"></textarea>
-          </p>
-        </div>
-      </div>
-
-    </section>
-    <footer class="modal-card-foot">
-      <a class="button is-primary" @click.prevent="saveBeer">Salvar</a>
-      <a class="button" @click.prevent="showModal=false">Cancelar</a>
-    </footer>
+      </section>
+      <footer class="modal-card-foot">
+        <a class="button is-primary" @click.prevent="saveBeer">Salvar</a>
+        <a class="button" @click.prevent="showModal=false">Cancelar</a>
+      </footer>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
   import Pagination from './Pagination.vue'
-  
 
   export default {
     data () {
@@ -226,35 +226,36 @@
           t.hideLoading();
         })
 
-       },
-       seers(){
+      },
+      seers(){
         this.leers()
-       },
-       neers(){
+      },
+      neers(){
         this.selected={}
         this.showModal = true;
-       },
-       editBeer(beer){
+      },
+      editBeer(beer){
         this.selected=beer
         this.showModal = true;
-       },
+      },
        removeBeer(beer){
         let self = this;
-        swal({  title: "Você tem certeza?",
-                 text: `Deseja apagar "${beer.name}"`,   
-                 type: "warning",   
-                 showCancelButton: true,   
-                 confirmButtonColor: "#DD6B55",   
-                 cancelButtonText: "Cancelar",
-                 confirmButtonText: "Sim, pode apagar!", 
-                 showLoaderOnConfirm: true,  
-                 closeOnConfirm: false }, function(){   
-                  
-                  self.$http.delete(`/beers/${beer.id}`).then(
-                    result=>{
-                      swal("Cervejaria removida!")
-                      self.leers()
-                    })
+        swal({
+          title: "Você tem certeza?",
+          text: `Deseja apagar "${beer.name}"`,   
+          type: "warning",   
+          showCancelButton: true,   
+          confirmButtonColor: "#DD6B55",   
+          cancelButtonText: "Cancelar",
+          confirmButtonText: "Sim, pode apagar!", 
+          showLoaderOnConfirm: true,  
+          closeOnConfirm: false }, function(){   
+
+            self.$http.delete(`/beers/${beer.id}`).then(
+              result=>{
+                swal("Cervejaria removida!")
+                self.leers()
+              })
         });
 
        },

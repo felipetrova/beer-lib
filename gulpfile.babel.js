@@ -166,7 +166,7 @@ gulp.task('watch', () => {
   gulp.watch(srcPaths.data + '**/*', { debounceDelay: 300 }, ['read:data', 'html']);
   gulp.watch(srcPaths.css, ['css']);
   // gulp.watch(srcPaths.js, ['js']);
-  // gulp.watch(srcPaths.img, ['images']);
+  gulp.watch(srcPaths.img, ['images']);
   // gulp.watch(srcPaths.icons, ['icons']);
 });
 
@@ -190,7 +190,7 @@ gulp.task('default', [
   'html',
   // 'vendors',
   // 'js',
-  // 'images',
+  'images',
   // 'svg',
   // 'icons',
   'watch',

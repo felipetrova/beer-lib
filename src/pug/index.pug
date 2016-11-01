@@ -54,11 +54,15 @@ html
 
     //- Put your content here
     //- --------------------------------------------------
-    .container
-      h1 #{config.title}
-      p #{config.description}
+    header.container
+      .columns
+        .column.is-4
+          img(src="img/beerlib-h.png", alt="BeerLib", class="logo")
+          //- h1 #{config.title}
+        .column.is-8
+          p.desc-about #{config.description}
 
-      app
+    app
 
 
         
