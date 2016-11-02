@@ -69,6 +69,36 @@
       "country": "Australia",
       "descript": "Sarah: \"Gostei, é leve e suave. Tomaria um balde\" :)",
       "id": 7
+    },
+    {
+      "name": "Weiss",
+      "brewery": "Hausen Bier",
+      "code": "",
+      "type": "WEISSBIER",
+      "website": "http://www.hausenbier.com.br/",
+      "country": "Brasil",
+      "descript": "Cor dourada, amargor suave e final refrescante.\nUma bela Weiss",
+      "id": 8
+    },
+    {
+      "name": "Treze Tilias",
+      "brewery": "Bierbaum",
+      "code": "",
+      "type": "WEISSBIER",
+      "website": "http://www.bierbaum.com.br/produtos_selecionado.php?id=8",
+      "country": "Brasil",
+      "descript": "Cerveja elaborada com 75% de malte de trigo defumado em carvalho, de alta fermentação e médio teor alcoólico. Possui caráter de malte defumado, médio aroma e sabor, amargor do lúpulo baixo. Cerveja altamente carbonatada e meio encorpada.",
+      "id": 9
+    },
+    {
+      "type": "SPECIALITY COFFEE",
+      "brewery": "Von Borstel",
+      "code": "",
+      "name": "Kaffee Bier",
+      "website": "http://www.clubedomalte.com.br/produto/von-borstel-kaffee-bier-66351",
+      "country": "Brasil",
+      "descript": "Cerveja escura, com sabores e aromas que lembram muito o café recém colhido. Com grãs colhidos das regiões mais nobres do Paraná.\nOBS: cerveja enjoativa. Apenas para quem realmente gosta do tipo.",
+      "id": 10
     }
   ]
 }

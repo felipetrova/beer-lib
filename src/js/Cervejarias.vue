@@ -19,7 +19,7 @@
 
     <div class="columns">
       <div class="column is-12">
-        <table class="table is-narrow is-striped is-bordered">
+        <table class="rwd-table">
           <thead>
             <tr>
               <th>Cerveja</th>
@@ -32,20 +32,21 @@
           </thead>
           <tbody>
             <tr v-for="beer in beers">
-              <td>{{beer.name}} | {{beer.brewery}}</td>
-              <td>{{beer.country}}</td>
-              <td>{{beer.type}}</td>
-              <td>{{beer.descript}}</td>
-              <td class="is-icon">
-                <a href="#">
+              <td data-th="Cerveja">{{beer.name}} | {{beer.brewery}}</td>
+              <td data-th="País">{{beer.country}}</td>
+              <td data-th="Tipo">{{beer.type}}</td>
+              <td data-th="Observação">{{beer.descript}}</td>
+              
+              <td data-th="Mais" class="is-icon">
+                <a href="{{beer.website}}" title="Acesse o site/FB" target="_blank">
                   <i class="fa fa-map-marker"></i>
                 </a>
-                <a href="#">
+                <!-- <a href="#">
                   <i class="fa fa-plus-circle"></i>
-                </a>
+                </a> -->
               </td>
-              <td class="is-icon">
-
+              
+              <td data-th="Ações" class="is-icon">
                 <a href="#" @click.prevent="editBeer(beer)">
                   <i class="fa fa-edit"></i>
                 </a>
@@ -126,6 +127,7 @@
                   <option>RADLER</option>
                   <option>RED ALE</option>
                   <option>SAISON</option>
+                  <option>SPECIALITY COFFEE</option>
                   <option>STOUT</option>
                   <option>TRIPEL</option>
                   <option>VIENNA</option>
